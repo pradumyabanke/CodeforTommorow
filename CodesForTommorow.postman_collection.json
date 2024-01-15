@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "3f370e94-6b95-4079-a9e8-f3ea384f7643",
+		"name": "CodesForTommorow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26708201",
+		"_collection_link": "https://bold-trinity-207194.postman.co/workspace/My-Workspace~36b7cbb9-1c45-4037-82ee-ec480d2654e3/collection/26708201-3f370e94-6b95-4079-a9e8-f3ea384f7643?action=share&source=collection_link&creator=26708201"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Codes for tomorrows\",\r\n    \"email\":\"code@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE0ZWRjOTQxMjA2MWQ2N2ZiMDZhYTkiLCJpYXQiOjE3MDUzMDc2OTd9.EWWxY978hsz3G08dDXmKx95sENUORvu2ooBph2e8vJ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"code@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/userLogin",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"userLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE0ZWRjOTQxMjA2MWQ2N2ZiMDZhYTkiLCJpYXQiOjE3MDUzMDc4ODF9.QRz0RokbGtZPN9NDaE3Y5sVPIXfyqOEyT55-mX42DuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_name\": \"Fan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/65a4edc9412061d67fb06aa9/category",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"65a4edc9412061d67fb06aa9",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/Getcategory",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Getcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE0ZWRjOTQxMjA2MWQ2N2ZiMDZhYTkiLCJpYXQiOjE3MDUzMDc4ODF9.QRz0RokbGtZPN9NDaE3Y5sVPIXfyqOEyT55-mX42DuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/65a4edc9412061d67fb06aa9/UpdateCategory?categoryId=65a4f911684fd0d118d93e52&category_name=fan",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"65a4edc9412061d67fb06aa9",
+						"UpdateCategory"
+					],
+					"query": [
+						{
+							"key": "categoryId",
+							"value": "65a4f911684fd0d118d93e52"
+						},
+						{
+							"key": "category_name",
+							"value": "fan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE0ZWRjOTQxMjA2MWQ2N2ZiMDZhYTkiLCJpYXQiOjE3MDUzMDc4ODF9.QRz0RokbGtZPN9NDaE3Y5sVPIXfyqOEyT55-mX42DuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/65a4edc9412061d67fb06aa9/DeleteCategory?categoryId=65a4f911684fd0d118d93e52",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"65a4edc9412061d67fb06aa9",
+						"DeleteCategory"
+					],
+					"query": [
+						{
+							"key": "categoryId",
+							"value": "65a4f911684fd0d118d93e52"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE0ZWRjOTQxMjA2MWQ2N2ZiMDZhYTkiLCJpYXQiOjE3MDUzMDc4ODF9.QRz0RokbGtZPN9NDaE3Y5sVPIXfyqOEyT55-mX42DuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"service_name\": \"Sample service\",\r\n    \"type\": \"Normal\",\r\n    \"priceOption\": [\"1\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/65a4edc9412061d67fb06aa9/service?categoryId=65a4ffe87b364297b6dbea98",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"65a4edc9412061d67fb06aa9",
+						"service"
+					],
+					"query": [
+						{
+							"key": "categoryId",
+							"value": "65a4ffe87b364297b6dbea98"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service Price",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE0ZWRjOTQxMjA2MWQ2N2ZiMDZhYTkiLCJpYXQiOjE3MDUzMDc4ODF9.QRz0RokbGtZPN9NDaE3Y5sVPIXfyqOEyT55-mX42DuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"duration\": \"1 hour\",\r\n  \"type\": \"Hourly\",\r\n  \"price\": 50.00\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/65a51b08ab3e08b6ec8a0913/Service_price",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"65a51b08ab3e08b6ec8a0913",
+						"Service_price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update service Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/65a4edc9412061d67fb06aa9/service/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"65a4edc9412061d67fb06aa9",
+						"service",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
